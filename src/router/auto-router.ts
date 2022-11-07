@@ -1,5 +1,4 @@
 import { RouteRecordRaw } from "vue-router";
-import router from ".";
 
 // import 自动引入
 const layouts = import.meta.globEager("../layouts/*.vue"); //获取所有布局
@@ -21,13 +20,9 @@ function getChildRouter(layoutRouters: RouteRecordRaw) {
     if (file.includes(`../views/${layoutRouters.name as string}`)) {
       const name = file.split("/").pop()?.split(".")[0];
       const route = getRouterModule(file, module);
-      console.log(route, 123);
-      console.log(route.component.route?.path, 1111);
       route.path =
         route.component.route?.path ??
         `/${layoutRouters.name as string}/${name}`;
-      // route.path = route.component.route ? route.component.route.path : `/${layoutRouters.name as string}/${name}`;
-
       routers.push(route);
     }
   });
