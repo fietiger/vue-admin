@@ -6,5 +6,4 @@ const router = createRouter({
   routes: [...routes, ...layoutRouters],
 });
 console.log(layoutRouters);
-
 export default router;

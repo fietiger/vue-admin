@@ -1,3 +1,2 @@
-export function setupPlugins(app: App) {
-  console.log(11);
-}
+import { App } from "vue";
+export function setupPlugins(app: App) {}
