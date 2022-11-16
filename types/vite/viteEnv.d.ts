@@ -1,7 +1,6 @@
 //d.ts是类型声明文件
 interface ViteEnv {
-  VITE_SOME: number;
-  VITE_SOME_DAD: boolean;
+  VITE_ROUTER_AUTOLOAD: boolean;
   VITE_SOME_DAD_URL: string;
 }
 
